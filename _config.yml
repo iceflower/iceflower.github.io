@@ -198,6 +198,19 @@ defaults:
 #   client_secret: "Your client secret"
 #   redirect_uri: "Your redirect url"   # If you use a custom domain name
 
+giscus:
+  theme: preferred_color_scheme
+  mapping: pathname
+  position: bottom
+  repo:
+    id: iceflower/iceflower.github.io
+    name: R_kgDOM-Qe4Q
+  category:
+    id: DIC_kwDOM-Qe4c4CjQlC
+    name: giscus-comment
+  reactions-enabled: true
+
+  
 # Utterances comments
 # See https://utteranc.es/
 # set follow_site_theme true to make utterances' theme follow the site's
