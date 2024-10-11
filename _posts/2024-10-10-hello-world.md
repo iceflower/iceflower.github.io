@@ -3,7 +3,7 @@ layout: post
 title: Hello World!
 subtitle: 블로그 생성 후 처음으로 작성하는 글
 banner:
-  image: https://github.com/user-attachments/assets/9f7c0ef9-dee2-442d-9dac-cfd55f2f1c39
+  # image: https://github.com/user-attachments/assets/9f7c0ef9-dee2-442d-9dac-cfd55f2f1c39
   opacity: 0.618
   background: "#000"
   height: "100vh"
