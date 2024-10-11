@@ -203,11 +203,11 @@ giscus:
   mapping: pathname
   position: bottom
   repo:
-    id: R_kgDOM-Qe4Q
+    id: R_kgDOM-u9bg
     name: iceflower/iceflower.github.io
   category:
-    id: DIC_kwDOM-Qe4c4CjQlC
-    name: giscus-comment
+    id: DIC_kwDOM-u9bs4CjQ5Z
+    name: blog-comment
   reactions-enabled: true
 
   
