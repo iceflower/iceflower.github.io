@@ -24,7 +24,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: 코드깎는아조씨
+title: 코드깎는아조씨의 블로그
 email: iceflower01@gmail.com
 author: UncleCoder
 
@@ -134,9 +134,9 @@ lang: "ko"  # default lang is en
 # Page default value
 defaults:
   home:
-    heading: "코드깎는아조씨의 기록"
-    subheading: "인정받는 개발자가 되고싶은 사람"
-#     banner: "Your image url"
+    heading: "잊지말고 기록하자"
+    subheading: "일 잘하는 개발자가 되기"
+    banner: "/assets/images/banners/home.png"
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
