@@ -199,12 +199,12 @@ defaults:
 #   redirect_uri: "Your redirect url"   # If you use a custom domain name
 
 giscus:
-  theme: preferred_color_scheme
+  theme: light
   mapping: pathname
   position: bottom
   repo:
-    id: iceflower/iceflower.github.io
-    name: R_kgDOM-Qe4Q
+    id: R_kgDOM-Qe4Q
+    name: iceflower/iceflower.github.io
   category:
     id: DIC_kwDOM-Qe4c4CjQlC
     name: giscus-comment
