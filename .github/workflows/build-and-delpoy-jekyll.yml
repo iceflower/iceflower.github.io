@@ -4,7 +4,12 @@ on:
   push:
     branches:
       - main  # Here source code branch is `main`, it could be other branch
-
+    paths-ignore:
+      - '.gitignore'
+      - '.editorconfig'
+      - 'README.md'
+      - 'CNAME'
+      
 jobs:
   # build job
   build:
