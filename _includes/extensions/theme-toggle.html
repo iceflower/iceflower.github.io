@@ -41,10 +41,26 @@
     function handleThemeToggle(nightShift) {
       themeData.nightShift = nightShift;
       saveThemeData(themeData);
-      html.dataset.theme = nightShift ? 'dark' : 'light';
+      const themeName = nightShift ? 'dark' : 'light';
+
+      // html 태그의 'data-theme' 속성값 변경
+      html.dataset.theme = themeName;
+
+      // 스위치 토글 변경
       setTimeout(function() {
         sw.checked = nightShift ? true : false;
       }, 50);
+
+      // giscus 플러그인에게, theme 속성 변경요청 메시지 전송
+      sendGiscusEventMessage({ setConfig: { theme: themeName } })
+    }
+
+    // giscus 플러그인 대상 이벤트 메시지 전송용 함수
+    function sendGiscusEventMessage(message) {
+      const iframe = document.querySelector('iframe.giscus-frame');
+      if (iframe) {
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
     }
 
     function autoThemeToggle() {
