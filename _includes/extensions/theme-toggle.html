@@ -50,17 +50,6 @@
       setTimeout(function() {
         sw.checked = nightShift ? true : false;
       }, 50);
-
-      // giscus 플러그인에게, theme 속성 변경요청 메시지 전송
-      sendGiscusEventMessage({ setConfig: { theme: themeName } })
-    }
-
-    // giscus 플러그인 대상 이벤트 메시지 전송용 함수
-    function sendGiscusEventMessage(message) {
-      const iframe = document.querySelector('iframe.giscus-frame');
-      if (iframe) {
-          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-      }
     }
 
     function autoThemeToggle() {

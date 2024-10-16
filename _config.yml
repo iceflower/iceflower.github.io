@@ -113,7 +113,7 @@ lang: "ko"  # default lang is en
 # it will be always kept on every visit (i.e. no matter
 # the browser is closed or not)
 #
-# night_mode: "auto"
+night_mode: "auto"
 
 # Code badge setting
 # You can enable or disable the code badge and so on
@@ -218,6 +218,7 @@ giscus:
     id: DIC_kwDOM-u9bs4CjQ5Z
     name: blog-comment
   reactions-enabled: true
+  follow_site_theme: true
 
 
 # Utterances comments
