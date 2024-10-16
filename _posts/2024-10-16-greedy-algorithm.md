@@ -43,49 +43,50 @@ last_modified_at: "2024-10-12 20:30:00 +0900"
 ### 3.1 탐욕 알고리즘으로 최적 해를 도출하는 데 성공한 경우
 서울에서 대전과 동대구를 거쳐 부산까지 가는, 최대한 빨리 갈 수 있는 경로를 찾는다고 가정한다.
 
-```mermaid!
-flowchart LR
-A(서울)
-B(대전)
-C(동대구)
-D(부산)
+<div class="mermaid"> 
+flowchart LR;
+A(서울);
+B(대전);
+C(동대구);
+D(부산);
 
 
-A -->|✅ **KTX: 59분**| B
-A -->|새마을: 1시간 45분| B
-A -->|무궁화: 2시간 5분| B
-B -->|✅ **KTX: 49분**| C
-B -->|새마을: 1시간 40분| C
-B -->|새마을: 1시간 58분| C
-C -->|✅ **KTX: 46분**| D
-C -->|새마을: 1시간 14분| D
-C -->|무궁화호: 1시간 29분| D
-```
+A -->|✅ **KTX: 59분**| B;
+A -->|새마을: 1시간 45분| B;
+A -->|무궁화: 2시간 5분| B;
+B -->|✅ **KTX: 49분**| C;
+B -->|새마을: 1시간 40분| C;
+B -->|새마을: 1시간 58분| C;
+C -->|✅ **KTX: 46분**| D;
+C -->|새마을: 1시간 14분| D;
+C -->|무궁화호: 1시간 29분| D;
+</div>
+
 
 `너무 뻔한 걸 예시랍치고 가져와서 민망하지만`, 그리디 알고리즘이 효과를 발휘할 수 있는 예시 중 하나라고 볼 수 있다.
 
 ### 3.2 탐욕 알고리즘으로 최적 해를 도출하는데 실패했을 경우 
 아래와 같은 트리를 탐색하며 선택해나간 값의 합계가 가장 큰 값을 구해야 한다고 가정해보자.
-```mermaid!
-flowchart TD
-    start("START") --- r0d("6") & r1d("5")
-    r0d --- r2d("7") & r3d("10")
-    r1d --- r4d("8") & r5d("4")
-    r2d --- r6d("1") & r7d("1")
-    r3d --- r8d("4") & r9d("2")
-    r4d --- r10d("3") & r11d("8")
-    r5d --- r12d("4") & r13d("25")
-    style r0d stroke:#D50000,fill:#D50000,color:#FFFFFF
-    style r1d stroke:#2962FF,fill:#2962FF,color:#FFFFFF
-    style r3d stroke:#D50000,fill:#D50000,color:#FFFFFF
-    style r5d stroke:#2962FF,fill:#2962FF,color:#FFFFFF
-    style r8d stroke:#D50000,fill:#D50000,color:#FFFFFF
-    style r13d stroke:#2962FF,fill:#2962FF,color:#FFFFFF
-    linkStyle 3 stroke:#D50000,fill:none
-    linkStyle 5 stroke:#2962FF,fill:none
-    linkStyle 8 stroke:#D50000,fill:none
-    linkStyle 13 stroke:#2962FF,fill:none
-```
+<div class="mermaid"> 
+flowchart TD;
+    start("START") --- r0d("6") & r1d("5");
+    r0d --- r2d("7") & r3d("10");
+    r1d --- r4d("8") & r5d("4");
+    r2d --- r6d("1") & r7d("1");
+    r3d --- r8d("4") & r9d("2");
+    r4d --- r10d("3") & r11d("8");
+    r5d --- r12d("4") & r13d("25");
+    style r0d stroke:#D50000,fill:#D50000,color:#FFFFFF;
+    style r1d stroke:#2962FF,fill:#2962FF,color:#FFFFFF;
+    style r3d stroke:#D50000,fill:#D50000,color:#FFFFFF;
+    style r5d stroke:#2962FF,fill:#2962FF,color:#FFFFFF;
+    style r8d stroke:#D50000,fill:#D50000,color:#FFFFFF;
+    style r13d stroke:#2962FF,fill:#2962FF,color:#FFFFFF;
+    linkStyle 3 stroke:#D50000,fill:none;
+    linkStyle 5 stroke:#2962FF,fill:none;
+    linkStyle 8 stroke:#D50000,fill:none;
+    linkStyle 13 stroke:#2962FF,fill:none;
+</div>
 
 <span style="color:blue">**가장 좋은 결과: 5 → 4 → 25 (합계: 34)**</span>
 
