@@ -5,55 +5,6 @@
 {% assign reactions-enabled = "0" %}
 {% endif %}
 
-
-{%- if site.giscus.follow_site_theme -%}
-<div id="giscus-placeholder"></div>
-<script>
-  const giscusThemeFromDataTheme = () => {
-    const dataTheme = document.documentElement.getAttribute('data-theme');
-    return `${dataTheme}`;
-  };
-
-  const setGiscusTheme = () => {
-    const iframe = document.querySelector('iframe.giscus-frame');
-    if (iframe) {
-      const message = { setConfig: { theme: giscusThemeFromDataTheme() } }
-
-      iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
-    }
-  }
-
-// dynamic change
-  const observer = new MutationObserver((mutationsList, observer) => {
-    for (let mutation of mutationsList) {
-      if (mutation.type === 'attributes' && mutation.attributeName === 'data-theme') {
-        setGiscusTheme();
-      }
-    }
-  });
-
-  observer.observe(document.documentElement, { attributes: true, childList: false, subtree: false });
-
-  let giscusScript = document.createElement('script');
-  giscusScript.async = true;
-  giscusScript.src = 'https://giscus.app/client.js';
-  giscusScript.setAttribute('data-repo','{{ site.giscus.repo.name }}');
-  giscusScript.setAttribute('data-repo-id','{{ site.giscus.repo.id }}');
-  giscusScript.setAttribute('data-category','{{ site.giscus.category.name }}');
-  giscusScript.setAttribute('data-category-id','{{ site.giscus.category.id }}');
-  giscusScript.setAttribute('data-strict','0');
-  giscusScript.setAttribute('data-reactions-enabled','{{ data-reactions-enabled }}');
-  giscusScript.setAttribute('data-emit-metadata','0');
-  giscusScript.setAttribute('data-input-position','{{ site.giscus.position }}');
-  giscusScript.setAttribute('data-mapping','{{ site.giscus.mapping }}');
-  giscusScript.setAttribute('data-lang','{{ site.lang }}');
-  giscusScript.setAttribute('data-theme', giscusThemeFromDataTheme());
-  giscusScript.setAttribute('crossorigin', "anonymous");
-
-  const placeholder = document.getElementById('giscus-placeholder');
-  placeholder.parentNode.replaceChild(giscusScript, placeholder);
-</script>
-{%- else -%}
 <script src="https://giscus.app/client.js"
         data-repo="{{ site.giscus.repo.name }}"
         data-repo-id="{{ site.giscus.repo.id }}"
@@ -63,10 +14,9 @@
         data-strict="0"
         data-reactions-enabled="{{ reactions-enabled }}"
         data-emit-metadata="0"
-        data-input-position="{{ {{ site.giscus.position }} }}"
+        data-input-position="{{ site.giscus.position }}"
         data-theme="{{ site.giscus.theme }}"
         data-lang="{{ site.lang }}"
         crossorigin="anonymous"
         async>
 </script>
-{% endif %}
