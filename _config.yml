@@ -135,8 +135,17 @@ lang: "ko"  # default lang is en
 defaults:
   home:
     heading: "잊지말고 기록하자"
-    subheading: "일 잘하는 개발자가 되기"
+    subheading: "일 잘하는 개발자가 되고싶어"
     banner: "/assets/images/banners/home.png"
+  post:
+    banner:
+      opacity: 0.618
+      background: "#000"
+      height: "100vh"
+      min_height: "38vh"
+      heading_style: "font-size: 4.25em; font-weight: bold; text-decoration: underline"
+      # subheading_style: "color: gold"
+
 
 # Banner default settings
 # These banner settings are for global banner default, but you can also
@@ -210,7 +219,7 @@ giscus:
     name: blog-comment
   reactions-enabled: true
 
-  
+
 # Utterances comments
 # See https://utteranc.es/
 # set follow_site_theme true to make utterances' theme follow the site's
