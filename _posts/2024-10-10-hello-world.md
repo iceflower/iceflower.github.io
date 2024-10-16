@@ -6,6 +6,8 @@ banner:
   image: https://github.com/user-attachments/assets/f3c118b4-248f-4d68-81f1-f76e45a2f598
 author: UncleCoder
 tag: hello-world
+date: "2024-10-10 16:55:00 +0900"              
+last_modified_at: "2024-10-10 16:55:00 +0900"  
 ---
 
 블로그 생성 후 처음 쓰는 글이다. (사실 여러번 만들었다 폭파하길 반복한 상태지만...)
