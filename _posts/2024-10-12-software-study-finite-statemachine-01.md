@@ -4,11 +4,6 @@ title: "유한 상태 기계(FSM) - 기본개념 정리"
 subtitle: "날아다니는 스파게티 괴물 (Flying Spaghetti Monster) 아닙니다."
 banner:
   image: https://github.com/user-attachments/assets/fae8919e-152b-4b23-bab1-2bc76c0c709f
-  opacity: 0.618
-  background: "#000"
-  height: "70vh"
-  min_height: "38vh"
-  heading_style: "font-size: 3.25em; font-weight: bold; text-decoration: underline"
 author: UncleCoder
 tags:
     - statemachine
