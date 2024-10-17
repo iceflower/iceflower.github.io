@@ -6,7 +6,7 @@ banner:
   image: https://github.com/user-attachments/assets/dc12349a-6535-469e-a2a5-b035092ec02f
 author: UncleCoder
 tags:
-    - algorithm-study
+    - algorithm
     - greedy-algorithm
 categories: algorithm-study
 date: "2024-10-16 20:30:00 +0900"              
