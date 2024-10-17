@@ -6,7 +6,11 @@
     <url>
       <loc>{{ site.url }}{{ post.url }}</loc>
       {% if post.lastmod == null %}
-        <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% if post.last_modified_at == null %}
+          <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+        {% else %}
+          <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+        {% endif %}
       {% else %}
         <lastmod>{{ post.lastmod | date_to_xmlschema }}</lastmod>
       {% endif %}
@@ -18,7 +22,7 @@
       {% endif %}
 
       {% if post.sitemap.priority == null %}
-          <priority>0.5</priority>
+          <priority>1</priority>
       {% else %}
         <priority>{{ post.sitemap.priority }}</priority>
       {% endif %}
