@@ -139,7 +139,7 @@ defaults:
     banner: "/assets/images/banners/home.png"
   post:
     banner:
-      opacity: 0.618
+      opacity: 0.580
       background: "#000"
       height: "100vh"
       min_height: "38vh"
