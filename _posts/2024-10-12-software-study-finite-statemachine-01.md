@@ -6,8 +6,9 @@ banner:
   image: https://github.com/user-attachments/assets/fae8919e-152b-4b23-bab1-2bc76c0c709f
 author: UncleCoder
 tags:
+    - algorithm
     - statemachine
-categories: software-study
+categories: algorithm-study
 date: "2024-10-12 16:55:00 +0900"              
 last_modified_at: "2024-10-12 16:55:00 +0900"   
 ---
