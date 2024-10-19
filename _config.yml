@@ -48,7 +48,7 @@ copyright: "Copyright © 2023-{currentYear} {author}"
 #   Google search results) and in your feed.xml site description.
 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://iceflower.github.io" # the base hostname & protocol for your site, e.g. https://example.com
+url: "https://iceflower.blog" # the base hostname & protocol for your site, e.g. https://example.com
 favicon: "" # the favicon for your site
 
 # Yat date format
